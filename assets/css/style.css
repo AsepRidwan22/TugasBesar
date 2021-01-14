@@ -1,0 +1,344 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: sans-serif;
+}
+/* header menu*/
+
+nav{
+    background-image: linear-gradient(45deg,#00349b,rgba(0,92,255,.9219),#007aff);
+    padding: 5px 10px;
+    box-shadow: 0 4px 4px rgba(0,0,0,.2);
+}
+ul{
+    list-style-type: none;
+}
+.logo img{
+    width: 275px;
+}
+.menu a{
+    color: #fff!important;
+    text-decoration: none;
+}
+.menu li{
+    font-size: 14px;
+    padding: 10px 5px;
+}
+.menu li a{
+    display: block;
+}
+.logo a{
+    font-size: 20px;
+}
+.button{
+    border: 1px solid #fff;
+}
+.item:not(.button) a:hover{
+    font-weight: 600;
+    transition: all .1s;
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.button:hover{
+    background-color:  rgba(0,92,255,.9219);
+    transition: all .25s;
+}
+.item:active{
+    color: black;
+}
+
+/* Mobile Menu Header */
+@media all and (max-width:468px){
+    .logo img{
+        width: 185px;
+    }
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle{
+    order: 1;
+}
+.item.button{
+    order: 2;
+}
+.item{
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+.item.active{
+    display: block;
+
+}
+.toggle{
+    cursor: pointer;
+    color: #fff;
+    opacity: 0.4;
+}
+.toggle p{
+    border: 1px solid #fff;
+    padding: 3px 6px;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+/* Tablet Menu Header*/
+
+@media all and (min-width:568px){
+    /* nav */
+    .menu{
+        justify-content: center;
+    }
+    .logo{
+        flex: 1;
+    }
+    .logo img{
+        width: 300px;
+    }
+    .item.button{
+        width: auto;
+        display: block;
+        order: 1;
+        border-radius: 4px;
+    }
+    .button a{
+        padding: 0px 15px;
+    }
+    .toggle p{
+        font-size: 25px;
+    }
+}
+
+/* Desktop Menu Header*/
+
+@media all and (min-width: 1170px){
+    .item{
+        display: block;
+        width: auto;
+    }
+    .toggle{
+        display: none;
+    }
+    .logo{
+        order: 0;
+    }
+    .item{
+        order: 1;
+    }
+    .button{
+        display: 2;
+    }
+    .menu li{
+        padding: 15px 10px;
+    }
+    .item.button{
+        border-radius: 30px;
+    }
+    .toggle p{
+        font-size: 15px;
+    }
+}
+
+/* main */
+.container{
+    display: flex;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+}
+.aside{
+    margin: 10px;
+}
+.aside p{
+    font-weight: 600;
+    text-align: center;
+    margin: 10px auto;
+}
+.harga{
+    text-align: center;
+}
+.harga a{
+    text-decoration: none;
+    color: #f39c12;
+    text-transform: capitalize;
+    border: solid 1px #f39c12;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 5px 15px;
+}
+.harga a:hover{
+    background-color: #f39c12;
+    color: #fff;
+}
+/* mobile-main */
+@media all and (max-width: 480px){
+    .aside{
+        width: 100%;
+    }
+    .aside img{
+        width: 100%;
+    }
+}
+
+/* tablet-main */
+@media all and (min-width: 480px){
+    .aside{
+        padding: 20px;
+        border: solid 1px lightgray;
+        border-radius: 10px;
+
+    }
+    .aside img{
+        width: 285px;
+        border-radius: 10px;
+    }
+
+}
+/* desktop-main */
+@media all and (min-width: 1080px){
+    .aside img{
+        width: 300px;
+    }
+    .container{
+        width: 90%;
+    }
+}
+.simple-pagination ul{
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-left: 10px;
+}
+.simple-pagination li{
+    display: inline-block;
+    margin: 2px;
+}
+.simple-pagination li a,
+.simple-pagination li span{
+    display: block;
+    width: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    text-align: center;
+
+    text-decoration: none;
+    color: #525252;
+    border-radius: 4px;
+    margin: 5px;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,.1), 0 2px 5px rgba(0,0,0,.5);
+    transition: all 1s ease;
+}
+.simple-pagination li a:hover{
+    background-color: #000000;
+    color: #fff;
+}
+.simple-pagination .current{
+    color: #fff;
+    background-color: #000000;
+    border-color: rgb(255, 255,255) ;
+    border: 1px solid;
+    cursor: pointer;
+}
+.simple-pagination .prev.current,
+.simple-pagination .next.current{
+    background-color: #222;
+    border: none;
+}
+/* footer */
+.footer{
+    display: flex;
+    padding: 20px 10px;
+    background-color: rgb(38, 53, 69);
+}
+.menu-footer li{
+    font-size: 14px;
+    border: solid 2px rgb(97, 97, 97);
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.menu-footer li a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+.footer-img img{
+    width: 20px;
+    color: #fff;
+}
+@media all and (max-width: 480px){
+    .menu-footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .item-footer{
+        width: 100%;
+        text-align: center;
+    }
+    .menu-footer li{
+        padding: 10px 20px;
+    }
+}
+.footer{
+    justify-content: center;
+}
+.menu-footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.item-footer{
+    margin: 10px;
+    padding: 10px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.menu-footer li:hover{
+    background-color: rgb(26, 35, 44);
+}
+i{
+    margin-right: 5px;
+    margin-bottom: -2px;
+    color: #fff;
+}
+/* copyright */
+
+.copyright{
+    background-color: #23303f;
+    display: flex;
+    justify-content: center;
+}
+.wrapper-copyright{
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    margin: 30px auto;
+}
+.wrapper-copyright p{
+    margin: 10px auto;
+}
+.wrapper-copyright a{
+    color: #fff;
+    text-decoration: none;
+}
+.wrapper-copyright a:hover{
+    text-decoration: underline;
+}
+
